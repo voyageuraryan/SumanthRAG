@@ -1,0 +1,14 @@
+{
+  "sections_after_merge": 258,
+  "chunks": 294,
+  "by_doc": {
+    "GC2627": 165,
+    "SH2026": 129
+  },
+  "words_min": 3,
+  "words_median": 91.0,
+  "words_mean": 121.7,
+  "words_max": 300,
+  "under_min_words": 25,
+  "over_max_words": 0
+}

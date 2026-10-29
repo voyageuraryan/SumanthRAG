@@ -1,0 +1,51 @@
+item_id,split,type,source_chunk_1,source_chunk_2,guidance
+D01,dev,single,GC2627-0007,,The Campus -- Write a question answered by this passage alone.
+D02,dev,single,GC2627-0121,,Regulations & Procedures > Family Educational Rights and Privacy Act -- Write a question answered by this passage alone.
+D03,dev,single,SH2026-0278,,"Departments & Services > Policies > Bicycles, Skates, Skateboards, and Hoverboards -- Write a question answered by this passage alone."
+D04,dev,single,GC2627-0103,,Regulations & Procedures > Academic Probation and Suspension > Academic Probation -- Write a question answered by this passage alone.
+D05,dev,multihop,SH2026-0248,SH2026-0255,"Departments & Services > Student Support & Well-Being > Residence Life & On-Campus Living > Check-In & Check-Out Procedures + Departments & Services > Student Support & Well-Being > Residence Life & On-Campus Living > Living Learning Communities (LLCs) & Residential Engagement > Residence Life Employment -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+D06,dev,multihop,GC2627-0094,GC2627-0130,"Regulations & Procedures > Academic Dishonesty/Academic Misconduct > Definitions > Academic Misconduct + Regulations & Procedures > Graduate Student Course Load -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+D07,dev,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+D08,dev,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+D09,dev,nearmiss,GC2627-0061,,Admission > Accelerated Bachelor to Master Degree Programs (AB2M) > Program Requirements -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+D10,dev,nearmiss,GC2627-0030,,"Academic Calendar > Summer term - May 11, 2026 to August 5, 2026 > June/July Summer Session - June 1, 2026 to July 1, 2026 -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain."
+T11,test,single,GC2627-0147,,Office of Disability Services -- Write a question answered by this passage alone.
+T12,test,single,SH2026-0272,,Departments & Services > Student Support & Well-Being > Veterans Upward Bound (VUB) -- Write a question answered by this passage alone.
+T13,test,single,GC2627-0101,,Regulations & Procedures > Academic Dishonesty/Academic Misconduct > Definitions > Appeal of an Academic Course Grade -- Write a question answered by this passage alone.
+T14,test,single,SH2026-0213,,Departments & Services > Safety & Campus Services > Emergency Alerts and Notifications > Reporting Concerns and Emergencies -- Write a question answered by this passage alone.
+T15,test,single,GC2627-0137,,Regulations & Procedures > Portfolio/Capstone Projects -- Write a question answered by this passage alone.
+T16,test,single,GC2627-0073,,Fees & Expenses > Payment of Accounts -- Write a question answered by this passage alone.
+T17,test,single,GC2627-0105,,Regulations & Procedures > Adding and Dropping Courses -- Write a question answered by this passage alone.
+T18,test,single,GC2627-0119,,Regulations & Procedures > Dissertation Defense Final Report -- Write a question answered by this passage alone.
+T19,test,single,SH2026-0172,,How to Use This Handbook > How to Get Help? -- Write a question answered by this passage alone.
+T20,test,single,GC2627-0107,,Regulations & Procedures > Application for Graduation -- Write a question answered by this passage alone.
+T21,test,single,GC2627-0145,,International Students and Scholars -- Write a question answered by this passage alone.
+T22,test,single,SH2026-0230,,Departments & Services > Student Support & Well-Being > Campus Life > Registered Student Organizations > Fraternity & Sorority Life (FSL) -- Write a question answered by this passage alone.
+T23,test,single,GC2627-0002,,University Mission Statement -- Write a question answered by this passage alone.
+T24,test,single,GC2627-0097,,Regulations & Procedures > Academic Dishonesty/Academic Misconduct > Definitions > Academic Grievance/Appeals Procedures -- Write a question answered by this passage alone.
+T25,test,single,GC2627-0026,,General Information > Equal Opportunity Employment -- Write a question answered by this passage alone.
+T26,test,single,GC2627-0084,,Fees & Expenses > Graduate College Recognition Awards > Award Presentation -- Write a question answered by this passage alone.
+T27,test,multihop,SH2026-0234,SH2026-0257,"Departments & Services > Student Support & Well-Being > Campus Life > University Supported Organizations > Student Activities Board (SAB) + Departments & Services > Student Support & Well-Being > Residence Life & On-Campus Living > Community Standards & Residence Hall Policies > Safety & Security -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T28,test,multihop,GC2627-0134,GC2627-0112,"Regulations & Procedures > Master's Thesis + Regulations & Procedures > Degree Works -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T29,test,multihop,GC2627-0071,GC2627-0085,"Fees & Expenses > Food and Housing + Fees & Expenses > Graduate College Recognition Awards > Angelo and Rosa Denova Graduate History Award -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T30,test,multihop,GC2627-0023,GC2627-0024,"General Information > Affirmative Action and nondiscrimination + General Information > Affirmative Action and nondiscrimination -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T31,test,multihop,SH2026-0271,SH2026-0231,"Departments & Services > Student Support & Well-Being > Veteran Services + Departments & Services > Student Support & Well-Being > Campus Life > Registered Student Organizations > Funding and resource access -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T32,test,multihop,GC2627-0063,GC2627-0046,"Admission > Undergraduate Senior Admission + Admission > Admission to Graduate College > Non-Degree Admission -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T33,test,multihop,SH2026-0199,SH2026-0197,"Departments & Services > Enrollment & Records > Office of the Registrar + Departments & Services > Enrollment & Records > Change of Name and Address -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T34,test,multihop,GC2627-0014,GC2627-0013,"Purpose + Purpose -- Needs BOTH passages. If no natural link exists, mark REDRAW in the log; never hand-pick a replacement."
+T35,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T36,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T37,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T38,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T39,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T40,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T41,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T42,test,unanswerable,,,"Write a plausible graduate-student question whose answer is NOT in the corpus; run `python -m src.eval_validate --check-absent ""<keywords>""` to confirm."
+T43,test,nearmiss,GC2627-0015,,Philosophy of Graduate Program -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T44,test,nearmiss,GC2627-0159,,Veteran Services > Benefits to Student Spouses of Service Members -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T45,test,nearmiss,SH2026-0274,,Departments & Services > Required Notices > Annual Security and Fire Safety Report (Clery Act) -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T46,test,nearmiss,SH2026-0282,,Departments & Services > Policies > Freedom of Expression Policy -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T47,test,nearmiss,GC2627-0140,,Regulations & Procedures > Withdrawing -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T48,test,nearmiss,GC2627-0009,,Tech History -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T49,test,nearmiss,GC2627-0089,,Graduation Requirements > Application for Graduation -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.
+T50,test,nearmiss,GC2627-0088,,Graduation Requirements > Degree Completion Requirements -- Write a question that SOUNDS answerable from this passage's topic but asks for a detail it does not contain.

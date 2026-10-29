@@ -1,0 +1,33 @@
+# docker compose up -d ollama                      # start the model server
+# docker compose run --rm ollama-pull              # one-time: pull llama3.1:8b (about 4.9 GB, cached in a volume)
+# docker compose run --rm app python -m src.ask "..."   # CLI
+# docker compose up app                            # web UI at http://127.0.0.1:8000
+# Dense (Condition B): docker compose build --build-arg DENSE=true app
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes: [ollama:/root/.ollama]
+    environment:
+      OLLAMA_KEEP_ALIVE: "60m"       # keep the model in RAM between questions (no reload)
+      OLLAMA_NUM_PARALLEL: "1"        # one request at a time: smaller KV cache, less RAM
+      OLLAMA_FLASH_ATTENTION: "1"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      retries: 20
+  ollama-pull:
+    image: ollama/ollama:latest
+    profiles: ["tools"]
+    depends_on: {ollama: {condition: service_healthy}}
+    environment: {OLLAMA_HOST: "http://ollama:11434"}
+    entrypoint: ["ollama", "pull", "${POLICYRAG_MODEL:-llama3.1:8b}"]
+  app:
+    build: .
+    depends_on: {ollama: {condition: service_healthy}}
+    environment:
+      OLLAMA_HOST: "http://ollama:11434"
+      POLICYRAG_MODEL: "${POLICYRAG_MODEL:-llama3.1:8b}"
+    volumes: [".:/app"]
+    ports: ["8000:8000"]
+volumes:
+  ollama:

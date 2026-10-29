@@ -1,0 +1,87 @@
+{
+  "run_id": "20261029-054521-dev-9ce6",
+  "split": "dev",
+  "items_file": "eval/questions_dev.jsonl",
+  "items_sha256": "55b8bf71776afc3aa84dc958656b89b8af986428a9c38291d1bf09eee7dd4d1a",
+  "n_items": 10,
+  "conditions": {
+    "A": {
+      "condition": "A",
+      "generation_config_id": "m3-baseline-v1",
+      "generation_config_hash": "ac6616007cb6",
+      "pipeline_config_hash": "22cc5ba2de67",
+      "chunks_sha256": "809dd620cdc90e83",
+      "prompt_version": "answer_v1",
+      "prompt_sha": "d91a17c2f597",
+      "retriever": {
+        "condition": "A",
+        "retriever": "bm25",
+        "params": {
+          "k1": 1.5,
+          "b": 0.75,
+          "lowercase": true,
+          "token_pattern": "[a-z0-9]+",
+          "remove_stopwords": true,
+          "stemming": false
+        }
+      },
+      "generator": {
+        "backend": "ollama",
+        "model": "llama3.1:8b",
+        "ollama_version": "0.40.13",
+        "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "8.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096,
+          "runner": "ggml"
+        }
+      },
+      "git_commit": "1456ac4",
+      "git_dirty": true,
+      "code_sha": "fb5b85bc8da4"
+    },
+    "0": {
+      "condition": "0",
+      "generation_config_id": "m3-baseline-v1",
+      "generation_config_hash": "ac6616007cb6",
+      "pipeline_config_hash": "22cc5ba2de67",
+      "chunks_sha256": "809dd620cdc90e83",
+      "prompt_version": "closedbook_v1",
+      "prompt_sha": "a10bb1b24de6",
+      "retriever": {
+        "condition": "0",
+        "retriever": "none"
+      },
+      "generator": {
+        "backend": "ollama",
+        "model": "llama3.1:8b",
+        "ollama_version": "0.40.13",
+        "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "8.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 131072,
+          "embedding_length": 4096,
+          "runner": "ggml"
+        }
+      },
+      "git_commit": "1456ac4",
+      "git_dirty": true,
+      "code_sha": "fb5b85bc8da4"
+    }
+  }
+}

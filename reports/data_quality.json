@@ -1,0 +1,179 @@
+{
+  "chunks": 294,
+  "words_total": 35772,
+  "length_words": {
+    "min": 3,
+    "p25": 56.0,
+    "median": 91.0,
+    "p75": 161.5,
+    "max": 300
+  },
+  "length_histogram": {
+    "<40": 25,
+    "40-99": 134,
+    "100-199": 75,
+    "200-300": 60
+  },
+  "exact_duplicate_chunks": 1,
+  "near_duplicate_pairs_j>=0.5": 3,
+  "near_duplicate_cross_document": 0,
+  "near_duplicate_examples": [
+    [
+      "GC2627-0002",
+      "GC2627-0017",
+      0.87
+    ],
+    [
+      "GC2627-0072",
+      "GC2627-0151",
+      0.52
+    ],
+    [
+      "GC2627-0089",
+      "GC2627-0107",
+      1.0
+    ]
+  ],
+  "chunks_by_top_section": [
+    [
+      "SH2026: Departments & Services",
+      114
+    ],
+    [
+      "GC2627: Regulations & Procedures",
+      49
+    ],
+    [
+      "GC2627: Admission",
+      28
+    ],
+    [
+      "GC2627: Fees & Expenses",
+      18
+    ],
+    [
+      "GC2627: Academic Calendar",
+      12
+    ],
+    [
+      "GC2627: General Information",
+      11
+    ],
+    [
+      "GC2627: Graduation Requirements",
+      6
+    ],
+    [
+      "SH2026: Where to Get Help",
+      6
+    ],
+    [
+      "GC2627: The Campus",
+      5
+    ],
+    [
+      "GC2627: Accelerated Bachelor to Master Program Listing",
+      5
+    ],
+    [
+      "SH2026: How to Use This Handbook",
+      5
+    ],
+    [
+      "GC2627: Veteran Services",
+      4
+    ],
+    [
+      "GC2627: Tech History",
+      3
+    ],
+    [
+      "GC2627: Purpose",
+      3
+    ],
+    [
+      "GC2627: Health & Wellness Center",
+      3
+    ],
+    [
+      "GC2627: Public Safety",
+      3
+    ],
+    [
+      "GC2627: Textbook Brokers",
+      3
+    ],
+    [
+      "SH2026: Emergency Contacts",
+      2
+    ],
+    [
+      "GC2627: (none)",
+      1
+    ],
+    [
+      "GC2627: University Vision Statement",
+      1
+    ],
+    [
+      "GC2627: University Mission Statement",
+      1
+    ],
+    [
+      "GC2627: Graduate College Vision & Mission Statement",
+      1
+    ],
+    [
+      "GC2627: Philosophy of Graduate Program",
+      1
+    ],
+    [
+      "GC2627: Administration of Graduate Program",
+      1
+    ],
+    [
+      "GC2627: Services for Students",
+      1
+    ],
+    [
+      "GC2627: International Students and Scholars",
+      1
+    ],
+    [
+      "GC2627: Norman Career Services",
+      1
+    ],
+    [
+      "GC2627: Office of Disability Services",
+      1
+    ],
+    [
+      "GC2627: Office of Events",
+      1
+    ],
+    [
+      "GC2627: Testing Services",
+      1
+    ],
+    [
+      "SH2026: (none)",
+      1
+    ],
+    [
+      "SH2026: 5 Essentials for Success at Arkansas Tech University (ATU)",
+      1
+    ]
+  ],
+  "pii": {
+    "email_mentions": 43,
+    "distinct_role_addresses": 22,
+    "distinct_individual_staff_addresses": 8,
+    "student_records": 0
+  },
+  "extraction_artifacts": {
+    "urls_split_by_linebreak": 3,
+    "email_glued_to_next_word": 1
+  },
+  "cross_references": 26,
+  "undergraduate_mentions": 62
+}

@@ -1,0 +1,13 @@
+{
+  "os": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.12.16",
+  "cpu": "",
+  "logical_cores": 14,
+  "ram_gb": 15.4,
+  "gpu": "no NVIDIA GPU detected",
+  "model": "llama3.1:8b",
+  "eval_tokens": 116,
+  "tokens_per_sec": 4.4,
+  "load_s": 9.6,
+  "wall_s": 38.2
+}

@@ -1,0 +1,942 @@
+{
+ "summary": {
+  "n_cases": 96,
+  "by_kind": {
+   "paraphrase": {
+    "n": 16,
+    "low_overlap": 3,
+    "number_not_in_source": 0,
+    "negation_mismatch": 4,
+    "any_flag": 6
+   },
+   "wrong_condition": {
+    "n": 6,
+    "low_overlap": 0,
+    "number_not_in_source": 0,
+    "negation_mismatch": 3,
+    "any_flag": 3
+   },
+   "verbatim": {
+    "n": 25,
+    "low_overlap": 0,
+    "number_not_in_source": 0,
+    "negation_mismatch": 0,
+    "any_flag": 0
+   },
+   "negation_flip": {
+    "n": 15,
+    "low_overlap": 0,
+    "number_not_in_source": 0,
+    "negation_mismatch": 14,
+    "any_flag": 14
+   },
+   "topic_swap": {
+    "n": 25,
+    "low_overlap": 22,
+    "number_not_in_source": 9,
+    "negation_mismatch": 4,
+    "any_flag": 23
+   },
+   "number_changed": {
+    "n": 9,
+    "low_overlap": 0,
+    "number_not_in_source": 8,
+    "negation_mismatch": 0,
+    "any_flag": 8
+   }
+  },
+  "supported_passed_rate": 0.854,
+  "unsupported_flagged_rate": 0.873
+ },
+ "cases": [
+  {
+   "id": "P01",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Up to half of the coursework a graduate degree requires can be transferred in, for example 15 hours of a 30-hour program, if the grades average B or better.",
+   "chunk": "GC2627-0051",
+   "flags": []
+  },
+  {
+   "id": "P02",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Certificate students can bring in at most 3 transferred graduate hours.",
+   "chunk": "GC2627-0051",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "P03",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Credits older than six years normally cannot count toward the degree.",
+   "chunk": "GC2627-0053",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "P04",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "To use an older course, the student has to show they are still current in the subject, and the program director and the graduate dean must both sign off.",
+   "chunk": "GC2627-0053",
+   "flags": []
+  },
+  {
+   "id": "P05",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "If you stop attending ATU for over a year, you have to apply for admission again.",
+   "chunk": "GC2627-0044",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "P06",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Retaking a course for graduate credit needs your advisor's written approval, and both grades count in your GPA.",
+   "chunk": "GC2627-0138",
+   "flags": [
+    "low_overlap",
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "P07",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "You cannot repeat a graduate course without written permission from your advisor.",
+   "chunk": "GC2627-0138",
+   "flags": []
+  },
+  {
+   "id": "P08",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "A suspended graduate student can apply to be readmitted after one year.",
+   "chunk": "GC2627-0104",
+   "flags": []
+  },
+  {
+   "id": "P09",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Being readmitted does not restore financial aid eligibility.",
+   "chunk": "GC2627-0104",
+   "flags": []
+  },
+  {
+   "id": "P10",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Students who finish in the fall walk at the December ceremony.",
+   "chunk": "GC2627-0090",
+   "flags": []
+  },
+  {
+   "id": "P11",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Summer graduates who apply by March 1 take part in the May ceremony.",
+   "chunk": "GC2627-0090",
+   "flags": []
+  },
+  {
+   "id": "P12",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "A dissertation enrollment shows an R until the dissertation is accepted, and an R earns no credit or grade points.",
+   "chunk": "GC2627-0111",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "P13",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "A program dismissal must be appealed to the department head within 10 calendar days of the department's decision.",
+   "chunk": "GC2627-0102",
+   "flags": []
+  },
+  {
+   "id": "P14",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "Smoking, vaping and chewing tobacco are banned everywhere on university property.",
+   "chunk": "SH2026-0292",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "P15",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "DPS enforces the tobacco ban for students, staff, visitors and contractors.",
+   "chunk": "SH2026-0292",
+   "flags": []
+  },
+  {
+   "id": "P16",
+   "kind": "paraphrase",
+   "supported": true,
+   "sentence": "A graduate student whose GPA is under 3.0 and who has been away for at least a year may qualify for academic clemency unless found guilty of academic dishonesty.",
+   "chunk": "GC2627-0129",
+   "flags": []
+  },
+  {
+   "id": "W01",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "Transferred graduate courses are accepted with a grade point average of C or better if the head of the department approves.",
+   "chunk": "GC2627-0051",
+   "flags": []
+  },
+  {
+   "id": "W02",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "A graduate student may repeat a course for graduate credit and only the grade from the repetition is counted in the grade point average.",
+   "chunk": "GC2627-0138",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "W03",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "During the suspension period a suspended student may still receive financial aid at ATU.",
+   "chunk": "GC2627-0104",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "W04",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "Students completing requirements during the summer term who apply to graduate after March 1 will participate in the May commencement ceremony.",
+   "chunk": "GC2627-0090",
+   "flags": []
+  },
+  {
+   "id": "W05",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "The Graduate College routinely approves courses older than six years without any documentation.",
+   "chunk": "GC2627-0053",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "W06",
+   "kind": "wrong_condition",
+   "supported": false,
+   "sentence": "Electronic cigarettes are allowed on university-owned property outside buildings.",
+   "chunk": "SH2026-0292",
+   "flags": []
+  },
+  {
+   "id": "V01",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "All students must be working toward a degree and should follow the curriculum outline for their objectives, since only specific courses may be applied toward VA certification and graduation.",
+   "chunk": "GC2627-0156",
+   "flags": []
+  },
+  {
+   "id": "G01",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "All students must not be working toward a degree and should follow the curriculum outline for their objectives, since only specific courses may be applied toward VA certification and graduation.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X01",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "All students must be working toward a degree and should follow the curriculum outline for their objectives, since only specific courses may be applied toward VA certification and graduation.",
+   "chunk": "SH2026-0266",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V02",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "If the circumstances require a student to stop attending classes during the semester due to military service, the student must present a copy of their orders to active duty causing the absence to the Coordinator of Veteran Services.",
+   "chunk": "GC2627-0157",
+   "flags": []
+  },
+  {
+   "id": "G02",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "If the circumstances require a student to stop attending classes during the semester due to military service, the student must not present a copy of their orders to active duty causing the absence to the Coordinator of Veteran Services.",
+   "chunk": "GC2627-0157",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X02",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "If the circumstances require a student to stop attending classes during the semester due to military service, the student must present a copy of their orders to active duty causing the absence to the Coordinator of Veteran Services.",
+   "chunk": "SH2026-0266",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V03",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Information regarding available examinations, eligibility, registration procedures, and testing policies is available on the Testing Services website.",
+   "chunk": "SH2026-0266",
+   "flags": []
+  },
+  {
+   "id": "G03",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Information regarding available examinations, eligibility, registration procedures, and testing policies is not available on the Testing Services website.",
+   "chunk": "SH2026-0266",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X03",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Information regarding available examinations, eligibility, registration procedures, and testing policies is available on the Testing Services website.",
+   "chunk": "GC2627-0156",
+   "flags": []
+  },
+  {
+   "id": "V04",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Vehicles can be registered by following these steps: 1.",
+   "chunk": "GC2627-0150",
+   "flags": []
+  },
+  {
+   "id": "N04",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Vehicles can be registered by following these steps: 4.",
+   "chunk": "GC2627-0150",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "G04",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Vehicles can not be registered by following these steps: 1.",
+   "chunk": "GC2627-0150",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X04",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Vehicles can be registered by following these steps: 1.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V05",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Registered Student Organizations (RSOs) provide opportunities for students to connect with peers, develop leadership skills, and engage in co-curricular experiences that support academic and personal growth.",
+   "chunk": "SH2026-0227",
+   "flags": []
+  },
+  {
+   "id": "X05",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Registered Student Organizations (RSOs) provide opportunities for students to connect with peers, develop leadership skills, and engage in co-curricular experiences that support academic and personal growth.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V06",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Subject to the approval of the advisor, program director, and Dean of Graduate College a graduate student may be allowed to apply six (6) or nine (9) semester hours toward a second master's degree.",
+   "chunk": "GC2627-0057",
+   "flags": []
+  },
+  {
+   "id": "N06",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Subject to the approval of the advisor, program director, and Dean of Graduate College a graduate student may be allowed to apply six (9) or nine (9) semester hours toward a second master's degree.",
+   "chunk": "GC2627-0057",
+   "flags": []
+  },
+  {
+   "id": "G06",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Subject to the approval of the advisor, program director, and Dean of Graduate College a graduate student may not be allowed to apply six (6) or nine (9) semester hours toward a second master's degree.",
+   "chunk": "GC2627-0057",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X06",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Subject to the approval of the advisor, program director, and Dean of Graduate College a graduate student may be allowed to apply six (6) or nine (9) semester hours toward a second master's degree.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V07",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "For full details, please refer to the University's Service Animal and Emotional Support Animal policies.",
+   "chunk": "SH2026-0263",
+   "flags": []
+  },
+  {
+   "id": "X07",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "For full details, please refer to the University's Service Animal and Emotional Support Animal policies.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V08",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Step 3: Formal Review If necessary, students may submit a written complaint for formal review.",
+   "chunk": "SH2026-0195",
+   "flags": []
+  },
+  {
+   "id": "N08",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Step 6: Formal Review If necessary, students may submit a written complaint for formal review.",
+   "chunk": "SH2026-0195",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "G08",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Step 3: Formal Review If necessary, students may not submit a written complaint for formal review.",
+   "chunk": "SH2026-0195",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X08",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Step 3: Formal Review If necessary, students may submit a written complaint for formal review.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V09",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "The mark R gives neither credit nor grade points toward a graduate degree.",
+   "chunk": "GC2627-0111",
+   "flags": []
+  },
+  {
+   "id": "X09",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "The mark R gives neither credit nor grade points toward a graduate degree.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "V10",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Event & Conference Facilities (Office of Events): Certain campus facilities support larger events, conferences, and University functions and are scheduled through the Office of Events.",
+   "chunk": "SH2026-0224",
+   "flags": []
+  },
+  {
+   "id": "G10",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Event & Conference Facilities (Office of Events): Certain campus facilities support larger events, conferences, and University functions and are not scheduled through the Office of Events.",
+   "chunk": "SH2026-0224",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X10",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Event & Conference Facilities (Office of Events): Certain campus facilities support larger events, conferences, and University functions and are scheduled through the Office of Events.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "V11",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Available Scholarships and Assistantships for Graduate Students can be found here: Funding Your Degree | Arkansas Tech University (atu.edu) (https://www.atu.edu/gradcollege/funding.php).",
+   "chunk": "GC2627-0082",
+   "flags": []
+  },
+  {
+   "id": "G11",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Available Scholarships and Assistantships for Graduate Students can not be found here: Funding Your Degree | Arkansas Tech University (atu.edu) (https://www.atu.edu/gradcollege/funding.php).",
+   "chunk": "GC2627-0082",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X11",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Available Scholarships and Assistantships for Graduate Students can be found here: Funding Your Degree | Arkansas Tech University (atu.edu) (https://www.atu.edu/gradcollege/funding.php).",
+   "chunk": "GC2627-0156",
+   "flags": []
+  },
+  {
+   "id": "V12",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "When concerns arise, roommates are expected to address issues directly with one another first.",
+   "chunk": "SH2026-0246",
+   "flags": []
+  },
+  {
+   "id": "N12",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "When concerns arise, roommates are expected to address issues directly with four another first.",
+   "chunk": "SH2026-0246",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "G12",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "When concerns arise, roommates are not expected to address issues directly with one another first.",
+   "chunk": "SH2026-0246",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X12",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "When concerns arise, roommates are expected to address issues directly with one another first.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V13",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Suite 7709 Seminole, FL 33775 (727) 210-2350\n415 North Charles Street Baltimore, MD 21201 (410) 347-7700",
+   "chunk": "GC2627-0019",
+   "flags": []
+  },
+  {
+   "id": "N13",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Suite 15418 Seminole, FL 33775 (727) 210-2350\n415 North Charles Street Baltimore, MD 21201 (410) 347-7700",
+   "chunk": "GC2627-0019",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "X13",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Suite 7709 Seminole, FL 33775 (727) 210-2350\n415 North Charles Street Baltimore, MD 21201 (410) 347-7700",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V14",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Emergency Alerts and Notifications: ATU uses coordinated communication systems and emergency procedures to help protect the campus community.",
+   "chunk": "SH2026-0210",
+   "flags": []
+  },
+  {
+   "id": "X14",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Emergency Alerts and Notifications: ATU uses coordinated communication systems and emergency procedures to help protect the campus community.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V15",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "(adopted January 2014) The vision of the Graduate College of Arkansas Tech University is to empower students through advanced degrees to meet the demands of a global society through intellectual inquiry, scholarly attainment, artistic endeavors and creative pursuits within and across disciplines.",
+   "chunk": "GC2627-0003",
+   "flags": []
+  },
+  {
+   "id": "N15",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "(adopted January 4028) The vision of the Graduate College of Arkansas Tech University is to empower students through advanced degrees to meet the demands of a global society through intellectual inquiry, scholarly attainment, artistic endeavors and creative pursuits within and across disciplines.",
+   "chunk": "GC2627-0003",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "G15",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "(adopted January 2014) The vision of the Graduate College of Arkansas Tech University is not to empower students through advanced degrees to meet the demands of a global society through intellectual inquiry, scholarly attainment, artistic endeavors and creative pursuits within and across disciplines.",
+   "chunk": "GC2627-0003",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X15",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "(adopted January 2014) The vision of the Graduate College of Arkansas Tech University is to empower students through advanced degrees to meet the demands of a global society through intellectual inquiry, scholarly attainment, artistic endeavors and creative pursuits within and across disciplines.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V16",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Individuals who graduated in May or December are eligible to apply by April 1st of the year following their graduation.",
+   "chunk": "GC2627-0083",
+   "flags": []
+  },
+  {
+   "id": "G16",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Individuals who graduated in May or December are not eligible to apply by April 1st of the year following their graduation.",
+   "chunk": "GC2627-0083",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X16",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Individuals who graduated in May or December are eligible to apply by April 1st of the year following their graduation.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V17",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "All graduate students, regardless of residency: in-state, out-of-state, or international, pay the same rate.",
+   "chunk": "GC2627-0068",
+   "flags": []
+  },
+  {
+   "id": "X17",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "All graduate students, regardless of residency: in-state, out-of-state, or international, pay the same rate.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V18",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "The four years of secondary work were dropped, one year at a time, and the last high school class was the class of 1929.",
+   "chunk": "GC2627-0010",
+   "flags": []
+  },
+  {
+   "id": "N18",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "The four years of secondary work were dropped, one year at a time, and the last high school class was the class of 3858.",
+   "chunk": "GC2627-0010",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "X18",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "The four years of secondary work were dropped, one year at a time, and the last high school class was the class of 1929.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "V19",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Within 30 days of the first day of classes, textbooks will be refunded with an original receipt and with a valid proof of add/drop.",
+   "chunk": "GC2627-0154",
+   "flags": []
+  },
+  {
+   "id": "N19",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Within 33 days of the first day of classes, textbooks will be refunded with an original receipt and with a valid proof of add/drop.",
+   "chunk": "GC2627-0154",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "G19",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Within 30 days of the first day of classes, textbooks will not be refunded with an original receipt and with a valid proof of add/drop.",
+   "chunk": "GC2627-0154",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X19",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Within 30 days of the first day of classes, textbooks will be refunded with an original receipt and with a valid proof of add/drop.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V20",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Individual graduate programs may establish more stringent guidelines as well as additional requirements not specifically precluded in this document with the approval of the Graduate College and Academic Affairs.",
+   "chunk": "GC2627-0062",
+   "flags": []
+  },
+  {
+   "id": "G20",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Individual graduate programs may establish more stringent guidelines as well as additional requirements specifically precluded in this document with the approval of the Graduate College and Academic Affairs.",
+   "chunk": "GC2627-0062",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X20",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Individual graduate programs may establish more stringent guidelines as well as additional requirements not specifically precluded in this document with the approval of the Graduate College and Academic Affairs.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "V21",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Applicants must request a complete undergraduate official transcript from their bachelor's awarding institution sent directly to Graduate Admissions.",
+   "chunk": "GC2627-0042",
+   "flags": []
+  },
+  {
+   "id": "G21",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "Applicants must not request a complete undergraduate official transcript from their bachelor's awarding institution sent directly to Graduate Admissions.",
+   "chunk": "GC2627-0042",
+   "flags": [
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "X21",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Applicants must request a complete undergraduate official transcript from their bachelor's awarding institution sent directly to Graduate Admissions.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V22",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Remain sheltered until you receive an all-clear via ATU Alert.",
+   "chunk": "SH2026-0251",
+   "flags": []
+  },
+  {
+   "id": "X22",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Remain sheltered until you receive an all-clear via ATU Alert.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V23",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "CPL credit must be earned for a specific course and cannot be earned for generic credit toward a graduate degree or certificate.",
+   "chunk": "GC2627-0055",
+   "flags": []
+  },
+  {
+   "id": "G23",
+   "kind": "negation_flip",
+   "supported": false,
+   "sentence": "CPL credit must not be earned for a specific course and cannot be earned for generic credit toward a graduate degree or certificate.",
+   "chunk": "GC2627-0055",
+   "flags": []
+  },
+  {
+   "id": "X23",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "CPL credit must be earned for a specific course and cannot be earned for generic credit toward a graduate degree or certificate.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "negation_mismatch"
+   ]
+  },
+  {
+   "id": "V24",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Follow posted evacuation plans and directions from University officials.",
+   "chunk": "SH2026-0250",
+   "flags": []
+  },
+  {
+   "id": "X24",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Follow posted evacuation plans and directions from University officials.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap"
+   ]
+  },
+  {
+   "id": "V25",
+   "kind": "verbatim",
+   "supported": true,
+   "sentence": "Rachel Broussard, Coordinator of Events Management Williamson Hall, Room 113 (479) 880-4454 rbroussard@atu.edu Arkansas Tech University offers a centralized office to both external and internal users for scheduling events, camps, and conferences.",
+   "chunk": "GC2627-0148",
+   "flags": []
+  },
+  {
+   "id": "N25",
+   "kind": "number_changed",
+   "supported": false,
+   "sentence": "Rachel Broussard, Coordinator of Events Management Williamson Hall, Room 226 (479) 880-4454 rbroussard@atu.edu Arkansas Tech University offers a centralized office to both external and internal users for scheduling events, camps, and conferences.",
+   "chunk": "GC2627-0148",
+   "flags": [
+    "number_not_in_source"
+   ]
+  },
+  {
+   "id": "X25",
+   "kind": "topic_swap",
+   "supported": false,
+   "sentence": "Rachel Broussard, Coordinator of Events Management Williamson Hall, Room 113 (479) 880-4454 rbroussard@atu.edu Arkansas Tech University offers a centralized office to both external and internal users for scheduling events, camps, and conferences.",
+   "chunk": "GC2627-0156",
+   "flags": [
+    "low_overlap",
+    "number_not_in_source"
+   ]
+  }
+ ]
+}

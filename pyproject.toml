@@ -1,0 +1,21 @@
+[project]
+name = "policy-rag"
+version = "0.3.0"
+description = "PolicyRAG: grounded, abstention-aware assistant for ATU graduate policy (INFT 5113, Milestone 3)"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "pymupdf==1.28.2",      # PDF parsing (pinned: extraction output must not drift)
+    "rank-bm25==0.2.2",     # Condition A (pinned: scores must not drift)
+    "numpy>=2.0,<3",
+    "openpyxl>=3.1,<4",     # evaluation authoring workbook
+    "fastapi>=0.110,<1",
+    "uvicorn>=0.29,<1",
+    "matplotlib>=3.8,<4",   # threshold-sensitivity plot
+    "pytest>=8",
+]
+
+[project.optional-dependencies]
+dense = ["sentence-transformers>=3.0,<7"]   # optional Condition B
+
+[tool.uv]
+package = false

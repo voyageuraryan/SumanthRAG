@@ -1,0 +1,12 @@
+# Python 3.10-3.13. Exact versions used for each reported run are captured by scripts/run_m3.ps1
+# into reports/environment_freeze.txt (pip freeze), so results stay traceable even with ranges here.
+pymupdf==1.28.2          # PDF parsing (pinned: extraction output must not drift)
+rank-bm25==0.2.2         # Condition A (pinned: scores must not drift)
+numpy>=2.0,<3
+openpyxl>=3.1,<4         # evaluation authoring workbook
+fastapi>=0.110,<1        # web API
+uvicorn>=0.29,<1
+matplotlib>=3.8,<4       # threshold-sensitivity plot
+pytest>=8
+# Generator: Ollama (https://ollama.com), installed separately. Model: llama3.1:8b (fallback llama3.2:3b).
+# Condition B (optional): pip install -r requirements-dense.txt

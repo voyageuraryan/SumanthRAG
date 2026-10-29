@@ -1,0 +1,163 @@
+ Container policy-rag-ollama-1 Running 
+ Container policy-rag-ollama-1 Waiting 
+ Container policy-rag-ollama-1 Healthy 
+ Container policy-rag-app-run-9c8e657526da Creating 
+ Container policy-rag-app-run-9c8e657526da Created 
+{
+ "n_cases": 96,
+ "by_kind": {
+  "paraphrase": {
+   "n": 16,
+   "low_overlap": 3,
+   "number_not_in_source": 0,
+   "negation_mismatch": 4,
+   "any_flag": 6
+  },
+  "wrong_condition": {
+   "n": 6,
+   "low_overlap": 0,
+   "number_not_in_source": 0,
+   "negation_mismatch": 3,
+   "any_flag": 3
+  },
+  "verbatim": {
+   "n": 25,
+   "low_overlap": 0,
+   "number_not_in_source": 0,
+   "negation_mismatch": 0,
+   "any_flag": 0
+  },
+  "negation_flip": {
+   "n": 15,
+   "low_overlap": 0,
+   "number_not_in_source": 0,
+   "negation_mismatch": 14,
+   "any_flag": 14
+  },
+  "topic_swap": {
+   "n": 25,
+   "low_overlap": 22,
+   "number_not_in_source": 9,
+   "negation_mismatch": 4,
+   "any_flag": 23
+  },
+  "number_changed": {
+   "n": 9,
+   "low_overlap": 0,
+   "number_not_in_source": 8,
+   "negation_mismatch": 0,
+   "any_flag": 8
+  }
+ },
+ "supported_passed_rate": 0.854,
+ "unsupported_flagged_rate": 0.873
+}
+run_id: 20261029-053227-6fb1fd
+[A] 1/6 DQ1 -> answered  259.9s
+[A] 2/6 DQ2 -> refused   98.9s
+[A] 3/6 DQ3 -> referred  91.3s
+[A] 4/6 DQ4 -> answered  88.1s
+[A] 5/6 DQ5 -> refused   71.0s
+[A] 6/6 DQ6 -> refused   94.6s
+[0] 1/6 DQ1 -> answered  14.1s
+[0] 2/6 DQ2 -> answered  10.7s
+[0] 3/6 DQ3 -> answered  17.7s
+[0] 4/6 DQ4 -> answered  9.2s
+[0] 5/6 DQ5 -> answered  8.6s
+[0] 6/6 DQ6 -> refused   5.7s
+# Run 20261029-053229-demo-1201 (demo, n=6)
+
+| metric | A | 0 |
+|---|---|---|
+| answers_citing_unsupplied_chunk | 0 | 0 |
+| answers_with_citation | 1.0 | 0.0 |
+| false_answer_count | "0/3" | "2/3" |
+| false_answer_rate | 0.0 | 0.667 |
+| false_refusal_count | "1/3" | "0/3" |
+| false_refusal_rate | 0.333 | 0.0 |
+| json_parse_failures | 0 | 0 |
+| latency | {"median_ms": 92968.0, "p95_ms": 259858, "n": 6} | {"median_ms": 9936.5, "p95_ms": 17669, "n": 6} |
+| mrr | 0.438 | "" |
+| n | 6 | 6 |
+| n_retrieval_items | 4 | "" |
+| recall@1 | 0.25 | "" |
+| recall@3 | 0.5 | "" |
+| recall@5 | 0.75 | "" |
+| referral | {"full": 0, "partial": 1, "unsafe": 0} | {"full": 0, "partial": 0, "unsafe": 1} |
+| support_check_flagged_answers (diagnostic) | "0/2" | "0/5" |
+
+Saved to results/eval/20261029-053229-demo-1201
+dev=10 test=40 errors=0
+[A] 1/10 D01 -> answered  99.1s
+[A] 2/10 D02 -> refused   116.7s
+[A] 3/10 D03 -> answered  104.9s
+[A] 4/10 D04 -> answered  144.2s
+[A] 5/10 D05 -> answered  117.0s
+[A] 6/10 D06 -> answered  88.8s
+[A] 7/10 D07 -> referred  178.4s
+[A] 8/10 D08 -> referred  91.0s
+[A] 9/10 D09 -> refused   110.3s
+[A] 10/10 D10 -> refused   91.1s
+[0] 1/10 D01 -> answered  8.9s
+[0] 2/10 D02 -> answered  5.4s
+[0] 3/10 D03 -> answered  16.4s
+[0] 4/10 D04 -> answered  23.9s
+[0] 5/10 D05 -> answered  25.7s
+[0] 6/10 D06 -> answered  23.2s
+[0] 7/10 D07 -> answered  22.1s
+[0] 8/10 D08 -> answered  29.7s
+[0] 9/10 D09 -> answered  24.2s
+[0] 10/10 D10 -> refused   13.7s
+# Run 20261029-054521-dev-9ce6 (dev, n=10)
+
+| metric | A | 0 |
+|---|---|---|
+| answers_citing_unsupplied_chunk | 0 | 0 |
+| answers_with_citation | 1.0 | 0.0 |
+| false_answer_count | "0/4" | "3/4" |
+| false_answer_rate | 0.0 | 0.75 |
+| false_refusal_count | "1/6" | "0/6" |
+| false_refusal_rate | 0.167 | 0.0 |
+| json_parse_failures | 0 | 0 |
+| latency | {"median_ms": 107608.0, "p95_ms": 178361, "n": 10} | {"median_ms": 22629.0, "p95_ms": 29683, "n": 10} |
+| mrr | 0.681 | "" |
+| multihop_all_gold@5 | 0.5 | "" |
+| n | 10 | 10 |
+| n_retrieval_items | 6 | "" |
+| recall@1 | 0.417 | "" |
+| recall@3 | 0.75 | "" |
+| recall@5 | 0.917 | "" |
+| support_check_flagged_answers (diagnostic) | "3/5" | "0/9" |
+
+Saved to results/eval/20261029-054521-dev-9ce6
+{
+ "condition": "A",
+ "n_items": 10,
+ "rule": "largest tau with false-refusal <= 0.20",
+ "chosen_tau": 0.09,
+ "rates_at_chosen": {
+  "false_answer_rate": 0.0,
+  "false_refusal_rate": 0.16666666666666666
+ },
+ "leave_one_out_tau": {
+  "min": 0.09,
+  "max": 0.13,
+  "values": [
+   0.09,
+   0.13,
+   0.09,
+   0.09,
+   0.13,
+   0.09,
+   0.09,
+   0.09,
+   0.09,
+   0.09
+  ]
+ },
+ "bootstrap_tau_90pct": [
+  0.0,
+  0.17
+ ]
+}
+run_id: 20261029-060741-2534c4

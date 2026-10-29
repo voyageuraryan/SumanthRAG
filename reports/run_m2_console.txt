@@ -1,0 +1,304 @@
+corpus hash check: OK
+{
+  "pages_processed": 76,
+  "empty_pages": [],
+  "ligatures_raw": 360,
+  "zero_width_raw": 0,
+  "header_footer_lines_removed": 111,
+  "table_rows_rebuilt": 103,
+  "headings_by_level": {
+    "GC2627:L0": 1,
+    "GC2627:L3": 92,
+    "GC2627:L1": 18,
+    "GC2627:L4": 24,
+    "GC2627:L2": 31,
+    "GC2627:L5": 9,
+    "SH2026:L2": 14,
+    "SH2026:L5": 91,
+    "SH2026:L4": 41,
+    "SH2026:L3": 50,
+    "SH2026:L1": 1
+  },
+  "blocks_excluded_by_section": {
+    "GC2627": 8,
+    "SH2026": 0
+  },
+  "blocks": 323,
+  "words": 34748,
+  "ligatures_after_normalization": 0,
+  "pii_scan": {
+    "emails": 43,
+    "phone_numbers": 24,
+    "urls": 74
+  }
+}
+run_id: 20261004-030331-fbcdd1
+{
+  "sections_after_merge": 258,
+  "chunks": 294,
+  "by_doc": {
+    "GC2627": 165,
+    "SH2026": 129
+  },
+  "words_min": 3,
+  "words_median": 91.0,
+  "words_mean": 121.7,
+  "words_max": 300,
+  "under_min_words": 25,
+  "over_max_words": 0
+}
+run_id: 20261004-030332-0f4d4f
+{
+ "chunks": 294,
+ "words_total": 35772,
+ "length_words": {
+  "min": 3,
+  "p25": 56.0,
+  "median": 91.0,
+  "p75": 161.5,
+  "max": 300
+ },
+ "length_histogram": {
+  "<40": 25,
+  "40-99": 134,
+  "100-199": 75,
+  "200-300": 60
+ },
+ "exact_duplicate_chunks": 1,
+ "near_duplicate_pairs_j>=0.5": 3,
+ "near_duplicate_cross_document": 0,
+ "near_duplicate_examples": [
+  [
+   "GC2627-0002",
+   "GC2627-0017",
+   0.87
+  ],
+  [
+   "GC2627-0072",
+   "GC2627-0151",
+   0.52
+  ],
+  [
+   "GC2627-0089",
+   "GC2627-0107",
+   1.0
+  ]
+ ],
+ "chunks_by_top_section": [
+  [
+   "SH2026: Departments & Services",
+   114
+  ],
+  [
+   "GC2627: Regulations & Procedures",
+   49
+  ],
+  [
+   "GC2627: Admission",
+   28
+  ],
+  [
+   "GC2627: Fees & Expenses",
+   18
+  ],
+  [
+   "GC2627: Academic Calendar",
+   12
+  ],
+  [
+   "GC2627: General Information",
+   11
+  ],
+  [
+   "GC2627: Graduation Requirements",
+   6
+  ],
+  [
+   "SH2026: Where to Get Help",
+   6
+  ],
+  [
+   "GC2627: The Campus",
+   5
+  ],
+  [
+   "GC2627: Accelerated Bachelor to Master Program Listing",
+   5
+  ],
+  [
+   "SH2026: How to Use This Handbook",
+   5
+  ],
+  [
+   "GC2627: Veteran Services",
+   4
+  ],
+  [
+   "GC2627: Tech History",
+   3
+  ],
+  [
+   "GC2627: Purpose",
+   3
+  ],
+  [
+   "GC2627: Health & Wellness Center",
+   3
+  ],
+  [
+   "GC2627: Public Safety",
+   3
+  ],
+  [
+   "GC2627: Textbook Brokers",
+   3
+  ],
+  [
+   "SH2026: Emergency Contacts",
+   2
+  ],
+  [
+   "GC2627: (none)",
+   1
+  ],
+  [
+   "GC2627: University Vision Statement",
+   1
+  ],
+  [
+   "GC2627: University Mission Statement",
+   1
+  ],
+  [
+   "GC2627: Graduate College Vision & Mission Statement",
+   1
+  ],
+  [
+   "GC2627: Philosophy of Graduate Program",
+   1
+  ],
+  [
+   "GC2627: Administration of Graduate Program",
+   1
+  ],
+  [
+   "GC2627: Services for Students",
+   1
+  ],
+  [
+   "GC2627: International Students and Scholars",
+   1
+  ],
+  [
+   "GC2627: Norman Career Services",
+   1
+  ],
+  [
+   "GC2627: Office of Disability Services",
+   1
+  ],
+  [
+   "GC2627: Office of Events",
+   1
+  ],
+  [
+   "GC2627: Testing Services",
+   1
+  ],
+  [
+   "SH2026: (none)",
+   1
+  ],
+  [
+   "SH2026: 5 Essentials for Success at Arkansas Tech University (ATU)",
+   1
+  ]
+ ],
+ "pii": {
+  "email_mentions": 43,
+  "distinct_role_addresses": 22,
+  "distinct_individual_staff_addresses": 8,
+  "student_records": 0
+ },
+ "extraction_artifacts": {
+  "urls_split_by_linebreak": 3,
+  "email_glued_to_next_word": 1
+ },
+ "cross_references": 26,
+ "undergraduate_mentions": 62
+}
+run_id: 20261004-030332-01be07
+{
+ "words_scanned": 36632,
+ "words_with_ligatures": 360,
+ "pct": 0.98,
+ "distinct_affected_words": 89,
+ "top_affected": [
+  [
+   "of\\ufb01ce",
+   40
+  ],
+  [
+   "of\\ufb01cial",
+   35
+  ],
+  [
+   "of\\ufb01cially",
+   31
+  ],
+  [
+   "\\ufb01nancial",
+   23
+  ],
+  [
+   "\\ufb01rst",
+   21
+  ],
+  [
+   "speci\\ufb01c",
+   15
+  ],
+  [
+   "\\ufb01nal",
+   14
+  ],
+  [
+   "certi\\ufb01cate",
+   10
+  ],
+  [
+   "\\ufb01eld",
+   9
+  ],
+  [
+   "noti\\ufb01cation",
+   8
+  ],
+  [
+   "\\ufb01fth",
+   8
+  ],
+  [
+   "bene\\ufb01ts",
+   7
+  ]
+ ]
+}
+run_id: 20261004-030332-448a23
+50 rows written (seed=13, eligible chunks=263)
+run_id: 20261004-030332-c11bcd
+....                                                                     [100%]
+4 passed in 0.15s
+query tokens: ['many', 'graduate', 'credit', 'hours', 'transfer', 'another', 'university']
+run_id: 20261004-030333-17f372
+[1]  14.164  GC2627-0054  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Taken After Admission 
+      If after admission to graduate study, a student wishes to take a course at another institution to count toward degree requirements at ATU, the student
+[2]  13.516  GC2627-0051  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Taken Prior to Admissi
+      A maximum of 50% of the coursework required for a graduate degree (e.g, fifteen (15) semester hours of graduate credit in a 30-hour program and eighte
+[3]  11.468  GC2627-0052  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Earned through Advance
+      Based on the military services transcript, advanced military training may be considered for acceptance as graduate-level transfer credit(s) at the dis
+[4]  11.468  GC2627-0045  p.17  Admission > Admission to Graduate College > Transfer Graduate Students
+      Transfer students seeking admission to ATU's Graduate College must submit official transcripts from all colleges/universities where they have been off
+[5]  11.365  GC2627-0055  p.18  Admission > Credit for Prior Learning
+      Credit for Prior Learning (CPL) is the process by which an individual's experiential and extra-institutional learning is assessed and evaluated for pu
+secret scan: CLEAN

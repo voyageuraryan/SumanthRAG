@@ -1,0 +1,16 @@
+# secrets (none are needed, but never commit env files)
+.env
+*.key
+# raw PDFs are public but not redistributed; re-download via URLs + hashes in configs/corpus_manifest.json
+data/raw/*.pdf
+# generated artifacts (rebuilt by scripts/run_m2.sh)
+data/processed/
+indexes/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Milestone 3
+dist/
+.venv/
+indexes/

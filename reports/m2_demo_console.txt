@@ -1,0 +1,33 @@
+$ python -m src.ingest
+corpus hash check: OK
+...
+
+$ python -m src.bm25_retriever "How many graduate credit hours can I transfer in from another university?" --k 3 --tag demo
+query tokens: ['many', 'graduate', 'credit', 'hours', 'transfer', 'another', 'university']
+run_id: 20261004-030334-10bef7
+[1]  14.164  GC2627-0054  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Taken After Admission 
+      If after admission to graduate study, a student wishes to take a course at another institution to count toward degree requirements at ATU, the student
+[2]  13.516  GC2627-0051  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Taken Prior to Admissi
+      A maximum of 50% of the coursework required for a graduate degree (e.g, fifteen (15) semester hours of graduate credit in a 30-hour program and eighte
+[3]  11.468  GC2627-0052  p.18  Admission > Transfer of Graduate Credit > Graduate Credit Earned through Advance
+      Based on the military services transcript, advanced military training may be considered for acceptance as graduate-level transfer credit(s) at the dis
+
+$ python -m src.bm25_retriever "What is the parking fine for parking in a faculty space?" --k 3 --tag demo
+query tokens: ['parking', 'fine', 'parking', 'faculty', 'space']
+run_id: 20261004-030335-d1a7c9
+[1]  14.788  GC2627-0150  p.36  Public Safety > Traffic Regulations
+      By authority of the Board of Trustees and in accordance with Legislative Act 328, 1967, Arkansas Tech University requires all members of the faculty, 
+[2]  13.727  SH2026-0209  p.22  Departments & Services > Safety & Campus Services > Department of Public Safety 
+      ATU regulates parking and traffic on campus to support safety and the academic environment. All students who park a vehicle on campus are required to 
+[3]  13.526  GC2627-0072  p.21  Fees & Expenses > Parking and Public Safety
+      https://www.atu.edu/psafe/park-info.php All vehicles on ATU campus are required to register and display a current parking permit. Permits are valid fr
+
+$ python -m src.bm25_retriever "Can I take a semester off?" --k 3 --tag demo
+query tokens: ['take', 'semester', 'off']
+run_id: 20261004-030335-b0e04b
+[1]   7.029  GC2627-0137  p.33  Regulations & Procedures > Portfolio/Capstone Projects
+      The scheduling of a second comprehensive exam is at the discretion of the department but can be no earlier than the subsequent semester after the firs
+[2]   5.114  GC2627-0106  p.28  Regulations & Procedures > Auditing Courses
+      Auditing of courses requires official admission to the University, approval by the instructor involved, and payment of the regular fee for the course.
+[3]    4.34  SH2026-0229  p.28  Departments & Services > Student Support & Well-Being > Campus Life > Registered
+      RSOs must comply with all University policies and procedures when hosting events, traveling, fundraising, or conducting organizational activities. - A

@@ -1,0 +1,40 @@
+digraph G {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.25, ranksep=0.32, pad=0.2, bgcolor="white"];
+  node  [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, fillcolor="#FFFFFF", color="#333333", penwidth=1.1];
+  edge  [fontname="Helvetica", fontsize=9, color="#444444", arrowsize=0.7];
+
+  subgraph cluster_off {
+    label="OFFLINE INGESTION  (run once per frozen corpus version)"; style="rounded,dashed"; color="#888888"; fontsize=10; fontcolor="#333333";
+    src  [label="Frozen corpus v1.0\n2 public ATU PDFs\nSHA-256 locked in manifest", fillcolor="#DCEBDD"];
+    ing  [label="Ingest + verify  ✔ built\nPyMuPDF · hash check · font-based\nheading detection · NFKC · header/\nfooter removal · calendar-row rebuild", fillcolor="#DCEBDD"];
+    chk  [label="Heading-aware chunker  ✔ built\n≤300 words, 1-sentence overlap,\nheading path prepended\n→ chunks.jsonl (294)", fillcolor="#DCEBDD"];
+    bm   [label="Sparse index  ✔ built\nBM25 Okapi (k1=1.5, b=0.75)", fillcolor="#DCEBDD"];
+    de   [label="Dense index  ○ M3\nbge-small-en-v1.5 → FAISS", fillcolor="#EEEEEE"];
+    dq   [label="Data-quality report  ✔ built\nduplicates · PII scan · lengths", fillcolor="#DCEBDD"];
+    src -> ing -> chk; chk -> bm; chk -> de; chk -> dq [style=dashed];
+  }
+
+  subgraph cluster_on {
+    label="ONLINE QUERY PATH"; style="rounded,dashed"; color="#888888"; fontsize=10; fontcolor="#333333";
+    ui   [label="Web UI  ○ M3\nquestion + optional document filter", fillcolor="#EEEEEE"];
+    api  [label="FastAPI  /query  /health  ○ M3\ninput validation (length, empty)", fillcolor="#EEEEEE"];
+    ret  [label="Retriever switch\nA: BM25 ✔   B: dense ○   C: hybrid + rerank ○", fillcolor="#FFF4D6"];
+    gate [label="Abstention gate 1 (retrieval)\nnormalized top score < τ ?\n(τ calibrated on DEV only)", fillcolor="#FFF4D6", shape=hexagon, style="filled"];
+    gen  [label="Generator  ○ M3\nLlama 3.1 8B Q4 via Ollama, T=0, seed 13\nanswers ONLY from passages; may emit\nINSUFFICIENT_EVIDENCE  (gate 2)", fillcolor="#EEEEEE"];
+    post [label="Post-processing + controls  ○ M3\ncitation attach · claim→passage overlap check\n· advisory banner · refusal formatting", fillcolor="#EEEEEE"];
+    ref  [label="Refusal / referral\nresponse", fillcolor="#EEEEEE"];
+    ui -> api -> ret -> gate;
+    gate -> gen [label=" pass"];
+    gate -> ref [label=" fail"];
+    gen -> post; gen -> ref [label=" insufficient", style=dashed];
+    out  [label="Response shown in UI\nanswer or refusal · citations (doc, section, page)\nverbatim passages · confidence · abstained flag", fillcolor="#FFF4D6"];
+    post -> out; ref -> out;
+  }
+
+  log [label="Logging  ✔ built (retrieval) / extended M3\nresults/runs.jsonl: run_id, git commit, config hash,\ncorpus + chunk hashes, query, chunk ids, scores,\nprompt + model version, output, latency", fillcolor="#E3ECF7"];
+  ev  [label="Evaluation harness\nmetrics.py ✔ · eval_validate.py ✔ · eval_sampler.py ✔\nrunner over dev(10)/test(40) ○ M3–M4", fillcolor="#E3ECF7"];
+
+  bm -> ret [style=dotted, label=" index"]; de -> ret [style=dotted];
+  out -> log [style=dashed, color="#6A8CB8", label=" every request"];
+  log -> ev [color="#6A8CB8"];
+}

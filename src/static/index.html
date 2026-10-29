@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PolicyRAG - ATU graduate policy assistant</title>
+<style>
+ :root{--ink:#1d2430;--quiet:#5b6573;--line:#d6dbe3;--bg:#f6f7f9;--card:#fff;--ok:#2f6f3e;--warn:#9a6a00;--no:#8a2f2f;--accent:#2f5d8a}
+ *{box-sizing:border-box} body{margin:0;font:15px/1.5 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+ main{max-width:860px;margin:0 auto;padding:24px 16px 60px} h1{font-size:20px;margin:0 0 4px} .sub{color:var(--quiet);margin:0 0 18px}
+ form{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+ textarea{width:100%;min-height:70px;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;resize:vertical}
+ .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px} select,button{font:inherit;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:#fff}
+ button{background:var(--accent);color:#fff;border:0;cursor:pointer} button[disabled]{opacity:.6}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:16px}
+ .tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;margin-bottom:8px}
+ .answered{border-left:5px solid var(--ok)} .answered .tag{background:#e3f1e6;color:var(--ok)}
+ .referred{border-left:5px solid var(--warn)} .referred .tag{background:#fbf0d6;color:var(--warn)}
+ .refused{border-left:5px solid var(--no)} .refused .tag{background:#f6e1e1;color:var(--no)}
+ h3{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--quiet);margin:14px 0 6px}
+ ul{margin:0;padding-left:18px} details{border-top:1px solid var(--line);padding:6px 0} summary{cursor:pointer}
+ .p{white-space:pre-wrap;color:#333;font-size:14px;margin:6px 0 4px} .meta{color:var(--quiet);font-size:12.5px}
+ .adv{margin-top:12px;font-size:13px;color:var(--warn)} .err{color:var(--no)} code{font-size:12.5px}
+</style></head>
+<body><main>
+<h1>PolicyRAG</h1>
+<p class="sub">Answers about ATU graduate policy from the 2026-27 Graduate Catalog and Student Handbook only, with citations. It says so when the documents do not answer.</p>
+<form id="f">
+  <label for="q" class="meta">Your question</label>
+  <textarea id="q" maxlength="500" required placeholder="e.g. How many graduate credit hours can I transfer in?"></textarea>
+  <div class="row">
+    <label class="meta">Documents <select id="doc"><option value="">Both</option><option value="GC2627">Graduate Catalog</option><option value="SH2026">Student Handbook</option></select></label>
+    <label class="meta">Condition <select id="cond"><option value="A">A - BM25 (baseline)</option><option value="0">0 - no retrieval (reference)</option><option value="B">B - dense (if installed)</option></select></label>
+    <button id="go">Ask</button><span id="busy" class="meta"></span>
+  </div>
+</form>
+<div id="out"></div>
+<p class="meta" id="health"></p>
+</main>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const label = {answered:"ANSWER", referred:"NOT IN THE DOCUMENTS - WHERE TO LOOK", refused:"NO ANSWER - THE DOCUMENTS DO NOT COVER THIS"};
+fetch("/health").then(r=>r.json()).then(h=>{document.getElementById("health").textContent =
+  `model ${h.generator.model} ${h.generator.digest ? "("+h.generator.digest.slice(7,19)+")" : ""} - chunks ${h.chunks_sha256} - code ${h.code_sha} - prompt ${h.prompt}` + (h.ok ? "" : " - GENERATOR NOT REACHABLE")}).catch(()=>{});
+document.getElementById("f").addEventListener("submit", async e => {
+  e.preventDefault(); const btn = document.getElementById("go"), busy = document.getElementById("busy"), out = document.getElementById("out");
+  btn.disabled = true; busy.textContent = "thinking... (a local model can take 10-60 s)"; out.innerHTML = "";
+  try {
+    const r = await fetch("/query", {method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({question: document.getElementById("q").value, doc_filter: document.getElementById("doc").value || null, condition: document.getElementById("cond").value})});
+    const d = await r.json(); if (!r.ok) throw new Error(d.detail || r.statusText);
+    const cites = d.citations.map(c => `<li><code>${esc(c.chunk_id)}</code> ${esc(c.doc)} - ${esc(c.section)} - p. ${esc(c.pages?.[0])}${c.supplied ? "" : " <span class='err'>(not among retrieved passages)</span>"}</li>`).join("");
+    const pass = d.passages.map((p,i) => `<details><summary>[${i+1}] <code>${esc(p.chunk_id)}</code> score ${esc(p.score)} - ${esc(p.heading)}</summary><div class="p">${esc(p.body)}</div><div class="meta">${esc(p.doc_title)}, p. ${esc(p.pages[0])}</div></details>`).join("");
+    const sup = d.support ? `<p class="meta">Support check (diagnostic only, not used to refuse): ${d.support.n_flagged}/${d.support.n_sentences} sentences flagged</p>` : "";
+    out.innerHTML = `<div class="card ${esc(d.outcome)}"><span class="tag">${label[d.outcome]}</span>
+      <div>${esc(d.answer)}</div>
+      <h3>Citations</h3>${cites ? `<ul>${cites}</ul>` : "<p class='meta'>None</p>"}
+      <h3>Retrieved passages</h3>${pass || "<p class='meta'>None (condition 0 uses no retrieval)</p>"}
+      <h3>Signals</h3><p class="meta">abstained: <b>${d.abstained}</b> - status: ${esc(d.status)} - top normalized retrieval score: ${esc(d.gate1.top_score_norm)} (uncalibrated; gate 1 threshold ${esc(d.gate1.tau)}) - ${(d.latency_ms/1000).toFixed(1)} s</p>${sup}
+      <p class="meta">condition ${esc(d.versions.condition)} - ${esc(d.versions.model)} ${esc(d.versions.digest)} - prompt ${esc(d.versions.prompt_version)} - code ${esc(d.versions.code_sha)}</p>
+      <p class="adv">&#9888; ${esc(d.advisory)}</p></div>`;
+  } catch (err) { out.innerHTML = `<div class="card refused"><span class="tag">ERROR</span><div>${esc(err.message)}</div></div>`; }
+  btn.disabled = false; busy.textContent = "";
+});
+</script>
+</body></html>

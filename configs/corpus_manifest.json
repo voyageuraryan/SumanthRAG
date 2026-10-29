@@ -1,0 +1,50 @@
+{
+  "corpus_version": "v1.0",
+  "frozen_on": "2026-10-04",
+  "frozen_by": "Sumanth Reddy Nalla",
+  "license_note": "Public institutional documents published by Arkansas Tech University. Used for non-commercial coursework. Raw PDFs are not redistributed in the public repository; download URLs and SHA-256 hashes are recorded so the exact snapshot can be verified.",
+  "documents": [
+    {
+      "doc_id": "GC2627",
+      "title": "2026-2027 Graduate Catalog",
+      "publisher": "Arkansas Tech University (CourseLeaf export)",
+      "source_url": "https://catalog.atu.edu/pdf/2026-2027%20Graduate%20Catalog.pdf",
+      "file": "data/raw/atu_graduate_catalog_2026-27.pdf",
+      "sha256": "a924b4624c151e1050e9cf947d40ed0f9da2d49f3bc2dea2e89d8167f750d5bf",
+      "bytes": 1269140,
+      "server_last_modified": "2026-04-13T15:07:19Z",
+      "pdf_creation_date": "2026-04-13",
+      "pages": 104,
+      "heading_font_levels": {"22": 0, "18": 1, "16": 2, "12": 3, "10": 4, "9": 5},
+      "heading_font_must_contain": "Bold",
+      "include_pages": [4, 38],
+      "exclude_sections": ["Administration & Faculty", "Degree Programs"],
+      "table_sections": ["Academic Calendar"],
+      "exclusion_reasons": {
+        "pages 1-3": "Title page and table of contents (navigation, not policy).",
+        "Administration & Faculty": "Lists of named individuals; no policy content; reduces personal-name exposure.",
+        "Degree Programs (pp. 39-104)": "Program curricula and course tables, not institution-wide policy. Out of scope for corpus v1.0; candidate stretch extension."
+      }
+    },
+    {
+      "doc_id": "SH2026",
+      "title": "Arkansas Tech University Student Handbook (online edition, PDF dated 2026-08-26)",
+      "publisher": "Arkansas Tech University, Office of Student Affairs",
+      "source_url": "https://www.atu.edu/studenthandbook/ATU_Student_Handbook.pdf",
+      "file": "data/raw/atu_student_handbook_2026-08-26.pdf",
+      "sha256": "cb3742f4b746dcaaf07ab151afe120091490f0f67bad012e20fbd6fcaa79de33",
+      "bytes": 1092589,
+      "server_last_modified": "2026-08-26T22:31:49Z",
+      "pdf_creation_date": "2026-08-26",
+      "pages": 50,
+      "heading_font_levels": {"16": 1, "14": 2, "13": 3, "12": 4, "11": 5},
+      "heading_font_must_contain": "Bold|Italic",
+      "include_pages": [10, 50],
+      "exclude_sections": [],
+      "exclusion_reasons": {
+        "pages 1-4": "Cover and table of contents.",
+        "pages 5-9": "Vision/mission, alma mater and fight song lyrics, welcome letters, and a leadership directory with personal names, phone numbers and e-mail addresses. Not policy; excluded to avoid indexing personal contact data."
+      }
+    }
+  ]
+}

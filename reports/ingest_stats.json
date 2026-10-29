@@ -1,0 +1,33 @@
+{
+  "pages_processed": 76,
+  "empty_pages": [],
+  "ligatures_raw": 360,
+  "zero_width_raw": 0,
+  "header_footer_lines_removed": 111,
+  "table_rows_rebuilt": 103,
+  "headings_by_level": {
+    "GC2627:L0": 1,
+    "GC2627:L3": 92,
+    "GC2627:L1": 18,
+    "GC2627:L4": 24,
+    "GC2627:L2": 31,
+    "GC2627:L5": 9,
+    "SH2026:L2": 14,
+    "SH2026:L5": 91,
+    "SH2026:L4": 41,
+    "SH2026:L3": 50,
+    "SH2026:L1": 1
+  },
+  "blocks_excluded_by_section": {
+    "GC2627": 8,
+    "SH2026": 0
+  },
+  "blocks": 323,
+  "words": 34748,
+  "ligatures_after_normalization": 0,
+  "pii_scan": {
+    "emails": 43,
+    "phone_numbers": 24,
+    "urls": 74
+  }
+}

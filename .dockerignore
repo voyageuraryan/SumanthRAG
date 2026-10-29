@@ -1,0 +1,10 @@
+.git
+.venv
+data/raw
+data/processed
+results
+dist
+indexes
+__pycache__
+.pytest_cache
+.env
